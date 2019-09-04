@@ -5,7 +5,7 @@ from kmt_logging import KMTLogger
 
 class KSTLogger:
 
-    def __init__(self,source_process_name=None, timestamp_format='%Y-%m-%d %H:%M:%S'))
+    def __init__(self,source_process_name=None, timestamp_format='%Y-%m-%d %H:%M:%S')
         self._source_process_name=source_process_name
         self._timestamp_format=timestamp_format
 
