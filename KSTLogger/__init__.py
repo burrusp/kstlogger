@@ -14,7 +14,7 @@ class KSTLogger:
 
     def log(self, log_severity, source_system_id, trade_id, source_system, log_detail, **kwargs):
         debug = os.environ["DEBUG"]
-        if log_severity.lower() == "debug" and debug: 
+        if log_severity.lower() == "debug" and debug.lower() == "true": 
             if kwargs:
                 kmtlogger.log(log_severity, log_detail, source_system_id=source_system_id, source_system=source_system, trade_id=trade_id, **kwargs)
             else:
