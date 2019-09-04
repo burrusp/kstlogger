@@ -30,7 +30,7 @@ class KSTLogger:
     def debug(self, source_system_id, trade_id, source_system, log_detail, additional = None):
         #debug = os.environ["DEBUG"]
         debug = "TRUE"
-        debug "False"
+        debug = "False"
         if debug.lower() == "true" or debug == True:
             also={}
             if additional:
