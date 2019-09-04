@@ -23,7 +23,9 @@ class KSTLogger:
         if additional:
             for item in additional:
                 also[item]=additional[item]
-        kmtlogger.log("INFO", log_detail, source_system_id=source_system_id, source_system=source_system, trade_id=trade_id, additional=also)
+            kmtlogger.log("INFO", log_detail, source_system_id=source_system_id, source_system=source_system, trade_id=trade_id, additional=also)
+        else:
+            kmtlogger.log("INFO", log_detail, source_system_id=source_system_id, source_system=source_system, trade_id=trade_id)
 
     def debug(self, source_system_id, trade_id, source_system, log_detail, additional = None):
         #debug = os.environ["DEBUG"]
@@ -40,26 +42,34 @@ class KSTLogger:
         if additional:
             for item in additional:
                 also[item]=additional[item]
-        kmtlogger.log("ERROR", log_detail, source_system_id=source_system_id, source_system=source_system, trade_id=trade_id, error_type="business_error", additional=also)
+            kmtlogger.log("ERROR", log_detail, source_system_id=source_system_id, source_system=source_system, trade_id=trade_id, error_type="business_error", additional=also)
+        else:
+            kmtlogger.log("INFO", log_detail, source_system_id=source_system_id, source_system=source_system, trade_id=trade_id)
 
     def techerror(self, source_system_id, trade_id, source_system, log_detail, additional = None):
         also={}
         if additional:
             for item in additional:
                 also[item]=additional[item]
-        kmtlogger.log("ERROR", log_detail, source_system_id=source_system_id, source_system=source_system, trade_id=trade_id, error_type="technical_error", additional=also)
+            kmtlogger.log("ERROR", log_detail, source_system_id=source_system_id, source_system=source_system, trade_id=trade_id, error_type="technical_error", additional=also)
+        else:
+            kmtlogger.log("INFO", log_detail, source_system_id=source_system_id, source_system=source_system, trade_id=trade_id)
 
     def error(self, source_system_id, trade_id, source_system, log_detail, additional = None):
         also={}
         if additional:
             for item in additional:
                 also[item]=additional[item]
-        kmtlogger.log("ERROR", log_detail, source_system_id=source_system_id, source_system=source_system, trade_id=trade_id, error_type="unhandled_error", additional=also)
+            kmtlogger.log("ERROR", log_detail, source_system_id=source_system_id, source_system=source_system, trade_id=trade_id, error_type="unhandled_error", additional=also)
+        else:
+            kmtlogger.log("INFO", log_detail, source_system_id=source_system_id, source_system=source_system, trade_id=trade_id)
 
     def warn(self, source_system_id, trade_id, source_system, log_detail, additional = None):
         also={}
         if additional:
             for item in additional:
                 also[item]=additional[item]
-        kmtlogger.log("warn", log_detail, source_system_id=source_system_id, source_system=source_system, trade_id=trade_id, additional=also)
+            kmtlogger.log("warn", log_detail, source_system_id=source_system_id, source_system=source_system, trade_id=trade_id, additional=also)
+        else:
+            kmtlogger.log("INFO", log_detail, source_system_id=source_system_id, source_system=source_system, trade_id=trade_id)
 
