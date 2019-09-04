@@ -5,7 +5,7 @@ setup(
   version = '0.1.0',
   author = 'Patrick Burrus',
   author_email = 'Patrick.burrus@kochind.com',
-  dependency_links=[
-        "https://kochsource.io/kmt-frameworks/logging-frameworks/kmt-logging.git@0.2.108.1"
+  install_requires=[
+        "KMTLogger @ https://kochsource.io/kmt-frameworks/logging-frameworks/kmt-logging.git@0.2.108.1"
     ],
 )
