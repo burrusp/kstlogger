@@ -8,10 +8,11 @@ class KSTLogger:
     def __init__(self,source_process_name=None, timestamp_format='%Y-%m-%d %H:%M:%S'):
         self._source_process_name=source_process_name
         self._timestamp_format=timestamp_format
-
-    def begin(self, lambdaname, source_system_id, trade_id, source_system):
+        global kmtlogger
         kmtlogger=KMTLogger(self._source_process_name)
-        kmtlogger.log("INFO", "Beginning lambda " + lambdaname, source_system_id=source_system_id, source_system=source_system, trade_id=trade_id)
+
+    def begin(self, lambda_name, trigger_file, source_system_id, trade_id, source_system):
+        kmtlogger.log("INFO", "invoked lambda " + lambda_name, source_system_id=source_system_id, source_system=source_system, trade_id=trade_id, trigger_file=trigger_file)
 
     def log_entry(log_severity, source_process_name, source_system_id, log_detail, Additional = None):
         logMessage = None
