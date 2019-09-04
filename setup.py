@@ -6,6 +6,6 @@ setup(
   author = 'Patrick Burrus',
   author_email = 'Patrick.burrus@kochind.com',
   install_requires=[
-        'kmt_logging @ git+https://kochsource.io/kmt-frameworks/logging-frameworks/kmt-logging.git@0.2.108.1'
+        'kmt_logging @ git+https://bJAQDrHxT8G2nNGjW3xa@kochsource.io/kmt-frameworks/logging-frameworks/kmt-logging.git@0.2.108.1'
     ]
 )
