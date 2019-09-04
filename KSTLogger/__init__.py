@@ -16,7 +16,7 @@ class KSTLogger:
         kmtlogger.log("INFO", "invoked lambda " + lambda_name, source_system_id=source_system_id, source_system=source_system, trade_id=trade_id, trigger_file=trigger_file)
 
     def end(self, lambda_name, destination_file, source_system_id, trade_id, source_system):
-        kmtlogger.log("INFO", "invoked lambda " + lambda_name, source_system_id=source_system_id, source_system=source_system, trade_id=trade_id, destination_file=destination_file)
+        kmtlogger.log("INFO", "completed lambda " + lambda_name, source_system_id=source_system_id, source_system=source_system, trade_id=trade_id, destination_file=destination_file)
 
     def info(self, source_system_id, trade_id, source_system, log_detail, additional = None):
         also={}
