@@ -13,7 +13,7 @@ class KSTLogger:
         debug = os.environ["DEBUG"]
         log_message={
             "log_severity": log_severity,
-            "source_process_name": self._source_process_name=source_process_name,
+            "source_process_name": self._source_process_name,
             "log_timestamp_utc": datetime.datetime.utcnow().strftime(self._timestamp_format),
             "log_detail": log_detail,
             "source_system_id": source_system_id,
