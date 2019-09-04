@@ -30,12 +30,15 @@ class KSTLogger:
     def debug(self, source_system_id, trade_id, source_system, log_detail, additional = None):
         #debug = os.environ["DEBUG"]
         debug = "TRUE"
-        if debug.lower() == "true":
+        debug "False"
+        if debug.lower() == "true" or debug == True:
             also={}
             if additional:
                 for item in additional:
                     also[item]=additional[item]
-            kmtlogger.log("DEBUG", log_detail, source_system_id=source_system_id, source_system=source_system, trade_id=trade_id, additional=also)
+                kmtlogger.log("DEBUG", log_detail, source_system_id=source_system_id, source_system=source_system, trade_id=trade_id, additional=also)
+            else:
+                kmtlogger.log("INFO", log_detail, source_system_id=source_system_id, source_system=source_system, trade_id=trade_id)
 
     def buserror(self, source_system_id, trade_id, source_system, log_detail, additional = None):
         also={}
