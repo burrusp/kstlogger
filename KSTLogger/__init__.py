@@ -23,8 +23,8 @@ class KSTLogger:
         if log_severity.lower() == "debug" and debug.lower() == "true": 
             if kwargs:
                 for arg in kwargs:
-                    if kwargs[arg_key] is not None:
-                        log_message[arg_key]=kwargs[arg]
+                    if kwargs[arg] is not None:
+                        log_message[arg]=kwargs[arg]
                 log_message=json.dumps(log_message)
                 print(log_message)
             else:
@@ -33,8 +33,8 @@ class KSTLogger:
         elif log_severity.lower() != "debug":
             if kwargs:
                 for arg in kwargs:
-                    if kwargs[arg_key] is not None:
-                        log_message[arg_key]=kwargs[arg]
+                    if kwargs[arg] is not None:
+                        log_message[arg]=kwargs[arg]
                 log_message=json.dumps(log_message)
                 print(log_message)
             else:
